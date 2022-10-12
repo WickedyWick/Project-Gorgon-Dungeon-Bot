@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "node index.js",
+    "cmd": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0"
+  },
+  "type":"module"
+}
