@@ -18,16 +18,21 @@ const commands = [
         ),
     new SlashCommandBuilder()
         .setName('vote')
-        .setDescription('Votes YES or NO for suggested dungeon run!')
+        .setDescription('Votes YES, NO or NOT COMING for suggested dungeon run!')
         .addStringOption(option => option
             .setName('choice')
             .addChoices(
                 { name: 'YES', value: 'YES' },
-                { name: 'NO', value: 'NO' }
+                { name: 'NO', value: 'NO' },
+                { name: 'NOT COMING', value: 'NOT COMING'}
             )
-            .setDescription('Yes or No')
+            .setDescription('Yes, No or Not coming')
             .setRequired(true)
-        )
+        ),
+    new SlashCommandBuilder()
+        .setName('dungeon')
+        .setDescription('Tells which dungeon is being voted!')
+
 ].map(command => command.toJSON())
 
 const rest = new REST({ vesrion: '10' }).setToken(process.env.TOKEN)
